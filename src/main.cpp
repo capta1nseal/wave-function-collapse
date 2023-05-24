@@ -1,6 +1,9 @@
 // debugging and command line interface
 #include <iostream>
 
+// grid data structure
+#include <array>
+
 // logic processing for cell restrictions
 #include "cell.cpp"
 
