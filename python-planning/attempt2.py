@@ -123,7 +123,7 @@ def valid_dirs(pos):
             valid_directions.extend([UP, UP_LEFT, UP_RIGHT])
         else: 
             valid_directions.extend([UP, UP_LEFT, UP_RIGHT, DOWN, DOWN_LEFT, DOWN_RIGHT])
-    
+
     return valid_directions
 
 class Index:
@@ -286,10 +286,10 @@ def observe():
     max_p = 0
     for pattern in possible_patterns:
         if max_p < probability[pattern]:
-            max_p == probability[pattern]
+            max_p = probability[pattern]
     
     
-    semi_random_pattern = random.choice([pat for pat in possible_patterns if probability[pat]>=max_p])
+    semi_random_pattern = random.choice([pat for pat in possible_patterns if probability[pat]<=max_p])
     
     # Set this pattern to be the only available at this position
     coefficients[min_entropy_pos[0]][min_entropy_pos[1]] = semi_random_pattern
